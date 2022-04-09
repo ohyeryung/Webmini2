@@ -4,10 +4,13 @@ import com.sparta.webmini2.dto.PostRequestDto;
 import com.sparta.webmini2.model.Post;
 import com.sparta.webmini2.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.List;
 
 
 @RequiredArgsConstructor
@@ -21,9 +24,11 @@ public class PostService {
 
             return PostRepository.save(post);
         }
-        //게시글 전체 조회
-        public List<Post> getPost() {
-            return PostRepository.findAllByOrderByModifiedAtDesc();
+        //게시글 전체 조회 , 페이징처리
+        public Page<Post> getPost(Pageable pageable) {
+
+
+            return PostRepository.findAllByOrderByModifiedAtDesc(pageable);
         }
         //게시글 특정 조회
         public Post getPost(Long postId) {
