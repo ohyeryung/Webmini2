@@ -1,6 +1,6 @@
 package com.sparta.webmini2.controller;
 
-import com.sparta.webmini2.Dto.SignupRequestDto;
+import com.sparta.webmini2.dto.SignupRequestDto;
 import com.sparta.webmini2.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;

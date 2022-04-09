@@ -1,6 +1,7 @@
 package com.sparta.webmini2.service;
 
-import com.sparta.webmini2.Dto.SignupRequestDto;
+
+import com.sparta.webmini2.dto.SignupRequestDto;
 import com.sparta.webmini2.model.User;
 import com.sparta.webmini2.repository.UserRepository;
 import lombok.RequiredArgsConstructor;

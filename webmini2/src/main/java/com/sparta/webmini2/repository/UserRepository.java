@@ -1,5 +1,6 @@
 package com.sparta.webmini2.repository;
 
+
 import com.sparta.webmini2.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
