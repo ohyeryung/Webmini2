@@ -5,10 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="340f1128-6f54-43d0-af13-08a6a1e35a2f" name="Changes" comment="Commit Test">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Webmini2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/dto/SignupRequestDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/dto/UserInfoDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/sercurity/FilterSkipMatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/sercurity/FormLoginSuccessHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/sercurity/UserDetailsImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/sercurity/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/sercurity/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/sercurity/filter/FormLoginFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/sercurity/filter/JwtAuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/sercurity/jwt/HeaderTokenExtractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/sercurity/jwt/JwtDecoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/sercurity/jwt/JwtPreProcessingToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/sercurity/jwt/JwtTokenUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/sercurity/provider/FormLoginAuthProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/sercurity/provider/JWTAuthProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/validator/UserInfoValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webmini2/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webmini2/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,11 +55,17 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -55,9 +81,36 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="webmini2.test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="webmini2.test" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Webmini2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="webmini2.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sparta.webmini2.Webmini2Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
