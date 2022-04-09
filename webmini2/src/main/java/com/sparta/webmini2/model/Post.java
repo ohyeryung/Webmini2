@@ -36,19 +36,19 @@ public class Post extends Timestamped {
     private boolean completed;
 
     @Column(nullable = false)
-    private String userId;
+    private String username;
 
 //    @Column(nullable = false)
 //    private String createdAt;
 
-    public Post(String title, String nickName, String post_content, int frontNum, int backNum, boolean completed, String userId) {
+    public Post(String title, String nickName, String post_content, int frontNum, int backNum, boolean completed, String username) {
         this.title = title;
         this.nickName = nickName;
         this.post_content = post_content;
         this.frontNum = frontNum;
         this.backNum = backNum;
         this.completed = completed;
-        this.userId = userId;
+        this.username = username;
 //        this.createdAt = createdAt;
     }
 
@@ -60,11 +60,10 @@ public class Post extends Timestamped {
         this.frontNum = requestDto.getFrontNum();
         this.backNum = requestDto.getBackNum();
         this.completed = requestDto.isCompleted();
-        this.userId = requestDto.getUserId();
+        this.username = requestDto.getUsername();
 //        this.createdAt = requestDto.getCreatedAt();
 
     }
-
     //게시글 수정
     public void update(PostRequestDto requestDto) {
         this.title = requestDto.getTitle();
@@ -73,6 +72,6 @@ public class Post extends Timestamped {
         this.frontNum = requestDto.getFrontNum();
         this.backNum = requestDto.getBackNum();
         this.completed = requestDto.isCompleted();
-        this.userId = requestDto.getUserId();
+        this.username = requestDto.getUsername();
     }
 }

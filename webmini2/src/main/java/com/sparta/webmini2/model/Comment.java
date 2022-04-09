@@ -18,7 +18,7 @@ public class Comment extends Timestamped {
 
     // nullable = false 반드시 값을 가지도록 합니다.
     @Column(nullable = false)
-    private String userId;
+    private String username;
 
     @Column(nullable = false)
     private String nickName;
@@ -32,20 +32,15 @@ public class Comment extends Timestamped {
 
     // 게시글 생성
     public Comment(CommentRequestDto requestDto) {
-
         this.nickName = requestDto.getNickName();
-        this.userId = requestDto.getUserId();
+        this.username = requestDto.getUsername();
         this.postId = requestDto.getPostId();
         this.comment_content = requestDto.getComment_content();
     }
-
-
     // 게시글 수정
     public void update(CommentRequestDto requestDto) {
-
 //        this.username = requestDto.getUsername();
         this.comment_content = requestDto.getComment_content();
 //        this.contentsId = requestDto.getContentsId();
-
     }
 }

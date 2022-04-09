@@ -23,35 +23,23 @@ public class CommentController {
     //     댓글 전체 조회
     @GetMapping("/api/comments/{postId}")
     public List<Comment> getComment(@PathVariable Long postId) {
-
-        return CommentRepository.findAllByPostIdOrderByCreatedAtDesc(postId);
+        return CommentService.getComment(postId);
     }
-
-
-
-
     // 댓글 생성
     @PostMapping("/api/comments/{postId}")
     public Comment createComment(@RequestBody CommentRequestDto requestDto){
-
-        Comment comment = new Comment(requestDto);
-
-
-        return CommentRepository.save(comment);
+        return CommentService.createComment(requestDto);
     }
-
     // 댓글 수정
     @PutMapping("/api/comments/{commentId}")
     public Long updateComment(@PathVariable Long commentId, @RequestBody CommentRequestDto requestDto) {
         CommentService.update(commentId, requestDto);
         return commentId;
     }
-
     //댓글 삭제
     @DeleteMapping("/api/comments/{commentId}")
-    public Long deleteComments(@PathVariable Long commentId) {
-        CommentRepository.deleteById(commentId);
+    public Long deleteComment(@PathVariable Long commentId) {
+        CommentService.deleteComment(commentId);
         return commentId;
     }
-
 }
