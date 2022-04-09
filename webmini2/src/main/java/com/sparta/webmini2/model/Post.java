@@ -64,4 +64,15 @@ public class Post extends Timestamped {
 //        this.createdAt = requestDto.getCreatedAt();
 
     }
+
+    //게시글 수정
+    public void update(PostRequestDto requestDto) {
+        this.title = requestDto.getTitle();
+        this.nickName = requestDto.getNickName();
+        this.post_content = requestDto.getPost_content();
+        this.frontNum = requestDto.getFrontNum();
+        this.backNum = requestDto.getBackNum();
+        this.completed = requestDto.isCompleted();
+        this.userId = requestDto.getUserId();
+    }
 }

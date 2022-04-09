@@ -2,7 +2,6 @@ package com.sparta.webmini2.controller;
 
 import com.sparta.webmini2.dto.PostRequestDto;
 import com.sparta.webmini2.model.Post;
-import com.sparta.webmini2.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,6 +12,7 @@ import java.util.List;
 public class PostController {
 
     private final com.sparta.webmini2.repository.PostRepository PostRepository;
+    private final com.sparta.webmini2.service.PostService PostService;
 
 
 
@@ -22,7 +22,7 @@ public class PostController {
         return PostRepository.findAllByOrderByModifiedAtDesc();
     }
 
-    // 게시글 특정 조회
+//     게시글 특정 조회
     @GetMapping("/api/post/{postId}")
     public Post getPost(@PathVariable Long postId) {
         Post post = PostRepository.findById(postId).orElseThrow(
@@ -39,7 +39,16 @@ public class PostController {
         return PostRepository.save(post);
     }
 
+    @PutMapping("/api/post/{postId}")
+    public Long updatePost(@PathVariable Long postId, @RequestBody PostRequestDto requestDto) {
+        PostService.update(postId, requestDto);
+        return postId;
+    }
 
-
+    @DeleteMapping("/api/post/{postId}")
+    public Long deletePost(@PathVariable Long postId) {
+        PostRepository.deleteById(postId);
+        return postId;
+    }
 
 }
