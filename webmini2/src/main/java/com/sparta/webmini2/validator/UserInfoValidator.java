@@ -44,7 +44,7 @@ public class UserInfoValidator {
 
         for (FieldError error : errors.getFieldErrors()) {
             String validKeyName = "message";
-            System.out.println(validKeyName);
+//            System.out.println(validKeyName);
             validatorResult.put(validKeyName, error.getDefaultMessage());
         }
         return validatorResult;

@@ -1,5 +1,6 @@
 package com.sparta.webmini2.controller;
 
+import com.sparta.webmini2.dto.ResponseDto;
 import com.sparta.webmini2.dto.SignupRequestDto;
 import com.sparta.webmini2.service.UserService;
 import com.sparta.webmini2.validator.UserInfoValidator;
@@ -18,18 +19,15 @@ public class UserController {
 
     // 회원 가입 요청 처리
     @PostMapping("/api/signup")
-    public String registUser(@RequestBody SignupRequestDto requestDto, Errors errors, Model model) {
+    public ResponseDto registUser(@RequestBody SignupRequestDto requestDto, Errors errors) {
         String message = signUpValidator.getValidMessage(requestDto, errors);
         System.out.println(message);
         if (message.equals("회원가입 성공")) {
-            userService.registUser(requestDto);
-            return "true";
+            return userService.registUser(requestDto);
+        } else {
+            return new ResponseDto(false);
         }
-        model.addAttribute("message", message);
-        return "false";
     }
-
-
 //    @PostMapping("api/login")
 //    public
 }
