@@ -21,13 +21,16 @@ public class UserInfoValidator {
     }
 
     public String getValidMessage(SignupRequestDto requestDto, Errors errors) {
+        String error = "";
         if (errors.hasErrors()) {
             // 유효성 통과 못한 필드와 메시지를 핸들링
             Map<String, String> validatorResult = validateHandling(errors);
             return validatorResult.get("message");
         } else if(checkUsernameDuplicate(requestDto.getUsername())) {
             return "이미 사용중인 아이디입니다.";
-        }  else if(!requestDto.getPassword().equals(requestDto.getPasswordCheck())) {
+        } else if(checkNickNameDuplicate(requestDto.getNickName())) {
+            return "이미 사용중인 닉네임입니다.";
+        } else if(!requestDto.getPassword().equals(requestDto.getPasswordCheck())) {
             return "비밀번호가 일치하지 않습니다";
         } else if(requestDto.getUsername().contains(requestDto.getPassword())) {
             return "비밀번호는 닉네임을 포함할 수 없습니다.";
@@ -41,6 +44,7 @@ public class UserInfoValidator {
 
         for (FieldError error : errors.getFieldErrors()) {
             String validKeyName = "message";
+            System.out.println(validKeyName);
             validatorResult.put(validKeyName, error.getDefaultMessage());
         }
         return validatorResult;
@@ -49,6 +53,11 @@ public class UserInfoValidator {
     //아이디 중복 체크
     public boolean checkUsernameDuplicate(String username) {
         return userRepository.existsByUsername(username);
+    }
+
+    //닉네임 중복 체크
+    public boolean checkNickNameDuplicate(String nickName) {
+        return userRepository.existsByNickName(nickName);
     }
 
 }
