@@ -5,7 +5,6 @@ import com.sparta.webmini2.dto.SignupRequestDto;
 import com.sparta.webmini2.service.UserService;
 import com.sparta.webmini2.validator.UserInfoValidator;
 import lombok.RequiredArgsConstructor;
-import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,9 +24,19 @@ public class UserController {
         if (message.equals("회원가입 성공")) {
             return userService.registUser(requestDto);
         } else {
-            return new ResponseDto(false);
+            ResponseDto responseDto = new ResponseDto(false, message);
+            return responseDto;
         }
     }
-//    @PostMapping("api/login")
-//    public
+
+    // 로그인
+    @PostMapping("api/login")
+    public ResponseDto loginUser(@RequestBody SignupRequestDto requestDto) {
+        return userService.loginUser(requestDto);
+    }
+
+    @PostMapping("api/idCheck")
+    public boolean idCheck(@RequestBody SignupRequestDto requestDto) {
+        return userService.idCheck(requestDto);
+    }
 }

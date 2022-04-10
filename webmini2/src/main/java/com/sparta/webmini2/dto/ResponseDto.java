@@ -5,7 +5,7 @@ import lombok.Getter;
 @Getter
 public class ResponseDto {
     private boolean result;
-    private String error;
+    private String errormessage;
     private String username;
     private String nickName;
     private String position;
@@ -14,4 +14,15 @@ public class ResponseDto {
         this.result = result;
     }
 
+    public ResponseDto(boolean result, String username, String nickName, String position) {
+        this.result = result;
+        this.username = username;
+        this.nickName = nickName;
+        this.position = position;
+    }
+
+    public ResponseDto(boolean result, String errormessage) {
+        this.result = result;
+        this.errormessage = errormessage;
+    }
 }

@@ -33,7 +33,7 @@ public class UserInfoValidator {
         } else if(!requestDto.getPassword().equals(requestDto.getPasswordCheck())) {
             return "비밀번호가 일치하지 않습니다";
         } else if(requestDto.getUsername().contains(requestDto.getPassword())) {
-            return "비밀번호는 닉네임을 포함할 수 없습니다.";
+            return "비밀번호는 아이디를 포함할 수 없습니다.";
         } else
             return "회원가입 성공";
     }
@@ -44,7 +44,6 @@ public class UserInfoValidator {
 
         for (FieldError error : errors.getFieldErrors()) {
             String validKeyName = "message";
-//            System.out.println(validKeyName);
             validatorResult.put(validKeyName, error.getDefaultMessage());
         }
         return validatorResult;
