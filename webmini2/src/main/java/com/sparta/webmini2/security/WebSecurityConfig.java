@@ -2,7 +2,6 @@ package com.sparta.webmini2.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -19,7 +18,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 //        http.csrf().disable();
-        http.csrf().ignoringAntMatchers("/user/**");
+        http.csrf().disable();
         http.headers().frameOptions().disable();
         http.authorizeRequests()
 
@@ -42,13 +41,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("*").permitAll()
 
                 // 그 외 모든 요청은 인증과정 필요
-                .anyRequest().authenticated()
+                .anyRequest().permitAll()
                 .and()
                 .formLogin()
-                .loginPage("/user/login")
-                .failureUrl("/user/login/error")
                 .defaultSuccessUrl("/")
                 .permitAll()
+                .loginPage("/user/login")
+                .loginProcessingUrl("/login")
+                .failureUrl("/user/login/error")
                 .and()
                 .logout()
                 .logoutUrl("/user/logout")
