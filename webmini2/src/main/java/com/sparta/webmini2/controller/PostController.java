@@ -42,14 +42,12 @@ public class PostController {
     }
     //게시글 수정
     @PutMapping("/api/post/{postId}")
-    public Long updatePost(@PathVariable Long postId, @RequestBody PostRequestDto requestDto) {
-        PostService.update(postId, requestDto);
-        return postId;
+    public PostResponseDto updatePost(@PathVariable Long postId, @RequestBody PostRequestDto requestDto) {
+        return PostService.update(postId, requestDto);
     }
     //게시글 삭제
     @DeleteMapping("/api/post/{postId}")
-    public Long deletePost(@PathVariable Long postId) {
-        PostService.deletePost(postId);
-        return postId;
+    public PostResponseDto deletePost(@PathVariable Long postId) {
+        return PostService.deletePost(postId);
     }
 }

@@ -5,18 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77bac69b-c7f1-4f41-afd2-abb3dcaec10c" name="Changes" comment="회원가입">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-09__10_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-09__10_09__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-09__10_09__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-09__10_09__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-09__8_05__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-09__8_05__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-09__8_05__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-09__8_05__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2022-04-09__1_36__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_2022-04-09__1_36__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__10_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__10_03__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__10_03__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__10_03__Changes_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__12_51__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__12_51__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__9_58__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__9_58__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/executionHistory/executionHistory.lock" afterDir="false" />
@@ -24,14 +12,14 @@
       <change beforePath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webmini2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmini2/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmini2/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/controller/CommentController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/controller/PostController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/security/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/security/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/service/CommentService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/service/PostService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webmini2/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/controller/CommentController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/controller/PostController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/service/CommentService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/service/PostService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -166,11 +154,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sparta.webmini2.dto" />
       <recent name="com.sparta.webmini2.service" />
       <recent name="com.sparta.webmini2.security" />
       <recent name="com.sparta.webmini2.repository" />
       <recent name="com.sparta.webmini2.model" />
-      <recent name="com.sparta.webmini2.controller" />
     </key>
   </component>
   <component name="RunManager">
@@ -191,7 +179,7 @@
       <option name="presentableId" value="Default" />
       <updated>1649419824657</updated>
       <workItem from="1649419826452" duration="11672000" />
-      <workItem from="1649574857950" duration="5819000" />
+      <workItem from="1649574857950" duration="9084000" />
     </task>
     <task id="LOCAL-00001" summary="게시글 전체조회 ,게시글 특정조회, 게시글 작성 완료">
       <created>1649421256523</created>

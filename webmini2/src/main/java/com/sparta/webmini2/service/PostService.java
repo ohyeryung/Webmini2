@@ -51,18 +51,23 @@ public class PostService {
 
     //게시글 수정
     @Transactional
-    public Long update(Long postId, PostRequestDto requestDto) {
+    public PostResponseDto update(Long postId, PostRequestDto requestDto) {
+        PostResponseDto postResponseDto = null;
         Post post = PostRepository.findById(postId).orElseThrow(
                 () -> new IllegalArgumentException("게시물이 존재하지 않습니다.")
         );
         post.update(requestDto);
-        return post.getPostId();
+//        post.getPostId();
+        postResponseDto = new PostResponseDto(true);
+        return postResponseDto;
     }
 
     //게시글 삭제
-    public Long deletePost(Long postId) {
+    public PostResponseDto deletePost(Long postId) {
+        PostResponseDto postResponseDto = null;
         PostRepository.deleteById(postId);
-        return postId;
+        postResponseDto = new PostResponseDto(true);
+        return postResponseDto;
     }
 }
 
