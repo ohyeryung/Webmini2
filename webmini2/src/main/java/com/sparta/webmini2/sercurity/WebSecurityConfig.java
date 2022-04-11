@@ -83,7 +83,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 // [로그아웃 기능]
                 .logout()
                 // 로그아웃 요청 처리 URL
-                .logoutUrl("/user/logout")
+                .logoutUrl("/api/logout")
                 .permitAll()
                 .and()
                 .exceptionHandling()
@@ -124,6 +124,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         skipPathList.add("GET,/user/**");
         skipPathList.add("GET,/api/**");
         skipPathList.add("POST,/api/signup");
+        skipPathList.add("POST,/api/logout");
 
         skipPathList.add("GET,/");
         skipPathList.add("GET,/basic.js");
