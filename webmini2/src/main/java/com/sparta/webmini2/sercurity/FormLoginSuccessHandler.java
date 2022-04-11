@@ -17,9 +17,13 @@ public class FormLoginSuccessHandler extends SavedRequestAwareAuthenticationSucc
     public void onAuthenticationSuccess(final HttpServletRequest request, final HttpServletResponse response,
                                         final Authentication authentication) {
         final UserDetailsImpl userDetails = ((UserDetailsImpl) authentication.getPrincipal());
+
+
         // Token 생성
         final String token = JwtTokenUtils.generateJwtToken(userDetails);
+
         response.addHeader(AUTH_HEADER, TOKEN_TYPE + " " + token);
+
     }
 
 }

@@ -26,9 +26,8 @@ public class FormLoginAuthProvider implements AuthenticationProvider {
         UsernamePasswordAuthenticationToken token = (UsernamePasswordAuthenticationToken) authentication;
         // FormLoginFilter 에서 생성된 토큰으로부터 아이디와 비밀번호를 조회함
         String username = token.getName();
-        System.out.println(username);
         String password = (String) token.getCredentials();
-        System.out.println(password);
+
 
         // UserDetailsService 를 통해 DB에서 username 으로 사용자 조회
         UserDetailsImpl userDetails = (UserDetailsImpl) userDetailsService.loadUserByUsername(username);

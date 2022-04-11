@@ -25,4 +25,11 @@ public class ResponseDto {
         this.result = result;
         this.errormessage = errormessage;
     }
+
+    public ResponseDto(String username, String userNickName, String userPosition) {
+        this.username = username;
+        this.nickName = userNickName;
+        this.position = userPosition;
+    }
+
 }

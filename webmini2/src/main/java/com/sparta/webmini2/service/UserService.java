@@ -41,29 +41,5 @@ public class UserService {
         return responseDto;
     }
 
-    // 로그인
-    public ResponseDto loginUser(SignupRequestDto requestDto) {
 
-//        // 요청 받은 data
-//        String username = requestDto.getUsername();
-//        String password = requestDto.getPassword();
-
-        User user = userRepository.findByUsername(requestDto.getUsername()).orElseThrow(
-                () -> new IllegalArgumentException("아이디가 존재하지 않습니다.")
-        );
-        System.out.println(user);
-
-        if (!passwordEncoder.matches(requestDto.getPassword(), user.getPassword())) {
-            throw new IllegalArgumentException("비밀번호가 존재하지 않습니다.");
-        }
-        ResponseDto responseDto = new ResponseDto(true, requestDto.getUsername(), requestDto.getNickName(), requestDto.getPosition());
-        System.out.println(responseDto);
-        return responseDto;
-    }
-
-    // 아이디 중복체크
-    public boolean idCheck(SignupRequestDto requestDto) {
-        boolean result = userRepository.existsByUsername(requestDto.getUsername());
-        return result;
-    }
 }
