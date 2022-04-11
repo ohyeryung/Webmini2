@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 @RestControllerAdvice
 @Component
@@ -22,10 +23,17 @@ public class UserInfoValidator {
 
     public String getValidMessage(SignupRequestDto requestDto, Errors errors) {
         String error = "";
+        String pattern = "^[a-zA-Z0-9]*$";
         if (errors.hasErrors()) {
             // 유효성 통과 못한 필드와 메시지를 핸들링
             Map<String, String> validatorResult = validateHandling(errors);
             return validatorResult.get("message");
+        } else if (requestDto.getUsername().length() < 3) {
+            return "ID을 4자 이상 입력하세요";
+        } else if (!Pattern.matches(pattern, requestDto.getUsername())) {
+            return "알파벳 대소문자와 숫자로만 입력하세요";
+        } else if (requestDto.getPassword().length() < 5) {
+            return "비밀번호를 6자 이상 입력하세요";
         } else if(checkUsernameDuplicate(requestDto.getUsername())) {
             return "이미 사용중인 아이디입니다.";
         } else if(checkNickNameDuplicate(requestDto.getNickName())) {
