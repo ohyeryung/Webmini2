@@ -1,6 +1,8 @@
 package com.sparta.webmini2.validator;
 
+import com.sparta.webmini2.dto.ResponseDto;
 import com.sparta.webmini2.dto.SignupRequestDto;
+import com.sparta.webmini2.model.User;
 import com.sparta.webmini2.repository.UserRepository;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
@@ -9,6 +11,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.regex.Pattern;
 
 @RestControllerAdvice
@@ -34,9 +37,7 @@ public class UserInfoValidator {
             return "알파벳 대소문자와 숫자로만 입력하세요";
         } else if (requestDto.getPassword().length() < 5) {
             return "비밀번호를 6자 이상 입력하세요";
-        } else if(checkUsernameDuplicate(requestDto.getUsername())) {
-            return "이미 사용중인 아이디입니다.";
-        } else if(checkNickNameDuplicate(requestDto.getNickName())) {
+        }  else if(checkNickNameDuplicate(requestDto.getNickName())) {
             return "이미 사용중인 닉네임입니다.";
         } else if(!requestDto.getPassword().equals(requestDto.getPasswordCheck())) {
             return "비밀번호가 일치하지 않습니다";
@@ -57,14 +58,24 @@ public class UserInfoValidator {
         return validatorResult;
     }
 
-    //아이디 중복 체크
+    //아이디 중복 체크//진행중
     public boolean checkUsernameDuplicate(String username) {
         return userRepository.existsByUsername(username);
-    }
+        }
+
 
     //닉네임 중복 체크
     public boolean checkNickNameDuplicate(String nickName) {
         return userRepository.existsByNickName(nickName);
     }
 
-}
+    public String idDueCheck(SignupRequestDto requestDto) {
+
+//        String message = "";
+//        String responseDto = new ResponseDto(message);
+        if  (checkUsernameDuplicate(requestDto.getUsername())){
+           return  "이미 사용중인 id입니다";
+        } return "사용 가능한 id입니다";
+
+
+}}
