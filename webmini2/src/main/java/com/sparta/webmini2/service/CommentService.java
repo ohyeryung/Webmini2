@@ -4,6 +4,8 @@ package com.sparta.webmini2.service;
 import com.sparta.webmini2.dto.CommentRequestDto;
 import com.sparta.webmini2.model.Comment;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -21,8 +23,8 @@ public class CommentService {
         return CommentRepository.save(comment);
     }
     //댓글 전체조회
-    public List<Comment> getComment(Long postId) {
-        return CommentRepository.findAllByPostIdOrderByCreatedAtDesc(postId);
+    public Page<Comment> getComment(Long postId ,Pageable pageable) {
+        return CommentRepository.findAllByPostIdOrderByCreatedAtDesc(postId, pageable);
     }
     //댓글 수정
     @Transactional
