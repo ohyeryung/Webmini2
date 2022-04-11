@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.security.auth.login.CredentialException;
+
 @RequiredArgsConstructor
 @RestController
 public class UserController {
@@ -31,17 +33,28 @@ public class UserController {
         }
     }
 
+    // 아이디 중복 검사
+    @PostMapping("/api/idCheck")
+    public ResponseDto idDueCheck(@RequestBody SignupRequestDto requestDto) {
+        String message = signUpValidator.idDueCheck(requestDto) ;
+        if (message == "이미 사용중인 아이디입니다.") {
+            return new ResponseDto(false, message);
+        } return new ResponseDto(true, message);
+
+    }
+
     // 로그인
-//    @PostMapping("api/login")
-//    public ResponseDto loginUser(@RequestBody SignupRequestDto requestDto) {
-//        return new ResponseDto(true);
-//    }
+    @PostMapping("api/login")
+    public ResponseDto loginUser(@RequestBody SignupRequestDto requestDto) {
+        return new ResponseDto(true);
+    }
 
     // 로그인 여부 확인
     @PostMapping("/api/islogin")
     public ResponseDto islogin(@AuthenticationPrincipal UserDetailsImpl userDetails) {
         return new ResponseDto(userDetails.getUsername(), userDetails.getUserNickName(), userDetails.getUserPosition());
     }
+
 
 
 }
