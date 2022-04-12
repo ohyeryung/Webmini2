@@ -1,7 +1,7 @@
-package com.sparta.webmini2.sercurity;
+package com.sparta.webmini2.security;
 
 
-import com.sparta.webmini2.sercurity.jwt.JwtTokenUtils;
+import com.sparta.webmini2.security.jwt.JwtTokenUtils;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
 

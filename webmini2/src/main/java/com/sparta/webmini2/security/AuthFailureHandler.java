@@ -1,13 +1,10 @@
-package com.sparta.webmini2.sercurity;
+package com.sparta.webmini2.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.authentication.BadCredentialsException;
-import org.springframework.security.authentication.CredentialsExpiredException;
 import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
-import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;

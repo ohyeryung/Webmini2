@@ -1,10 +1,10 @@
-package com.sparta.webmini2.sercurity;
+package com.sparta.webmini2.security;
 
-import com.sparta.webmini2.sercurity.filter.FormLoginFilter;
-import com.sparta.webmini2.sercurity.filter.JwtAuthFilter;
-import com.sparta.webmini2.sercurity.jwt.HeaderTokenExtractor;
-import com.sparta.webmini2.sercurity.provider.FormLoginAuthProvider;
-import com.sparta.webmini2.sercurity.provider.JWTAuthProvider;
+import com.sparta.webmini2.security.filter.FormLoginFilter;
+import com.sparta.webmini2.security.filter.JwtAuthFilter;
+import com.sparta.webmini2.security.jwt.HeaderTokenExtractor;
+import com.sparta.webmini2.security.provider.FormLoginAuthProvider;
+import com.sparta.webmini2.security.provider.JWTAuthProvider;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

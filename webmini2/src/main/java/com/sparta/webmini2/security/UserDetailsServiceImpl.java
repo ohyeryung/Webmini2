@@ -1,4 +1,4 @@
-package com.sparta.webmini2.sercurity;
+package com.sparta.webmini2.security;
 
 import com.sparta.webmini2.model.User;
 import com.sparta.webmini2.repository.UserRepository;

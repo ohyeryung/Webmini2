@@ -2,7 +2,7 @@ package com.sparta.webmini2.controller;
 
 import com.sparta.webmini2.dto.ResponseDto;
 import com.sparta.webmini2.dto.SignupRequestDto;
-import com.sparta.webmini2.sercurity.UserDetailsImpl;
+import com.sparta.webmini2.security.UserDetailsImpl;
 import com.sparta.webmini2.service.UserService;
 import com.sparta.webmini2.validator.UserInfoValidator;
 import lombok.RequiredArgsConstructor;

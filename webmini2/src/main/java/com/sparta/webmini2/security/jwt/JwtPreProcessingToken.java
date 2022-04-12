@@ -1,4 +1,4 @@
-package com.sparta.webmini2.sercurity.jwt;
+package com.sparta.webmini2.security.jwt;
 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 

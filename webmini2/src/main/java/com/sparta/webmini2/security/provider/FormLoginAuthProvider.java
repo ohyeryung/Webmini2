@@ -1,6 +1,6 @@
-package com.sparta.webmini2.sercurity.provider;
+package com.sparta.webmini2.security.provider;
 
-import com.sparta.webmini2.sercurity.UserDetailsImpl;
+import com.sparta.webmini2.security.UserDetailsImpl;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
