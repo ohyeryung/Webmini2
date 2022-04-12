@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77bac69b-c7f1-4f41-afd2-abb3dcaec10c" name="Changes" comment="id 중복검사">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/Dto/SignupRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/Dto/SignupRequestDto.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -147,6 +146,7 @@
       <option name="presentableId" value="Default" />
       <updated>1649419824657</updated>
       <workItem from="1649419826452" duration="11672000" />
+      <workItem from="1649724326169" duration="392000" />
     </task>
     <task id="LOCAL-00001" summary="게시글 전체조회 ,게시글 특정조회, 게시글 작성 완료">
       <created>1649421256523</created>
@@ -183,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649503382934</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="id 중복검사">
+      <created>1649724542818</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1649724542818</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +225,7 @@
     <MESSAGE value="각종 패키지 클래스 생성" />
     <MESSAGE value="컨트롤러,서비스 리팩토링 완료" />
     <MESSAGE value="회원가입" />
-    <option name="LAST_COMMIT_MESSAGE" value="회원가입" />
+    <MESSAGE value="id 중복검사" />
+    <option name="LAST_COMMIT_MESSAGE" value="id 중복검사" />
   </component>
 </project>
