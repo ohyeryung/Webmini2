@@ -1,26 +1,24 @@
 package com.sparta.webmini2.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
 
-@Setter
-@Getter // get 함수를 일괄적으로 만들어줍니다.
-@NoArgsConstructor // 기본 생성자를 만들어줍니다.
-@Entity // DB 테이블 역할을 합니다.
-public class User extends Timestamped {
-    // ID가 자동으로 생성 및 증가합니다.
-    @GeneratedValue(strategy = GenerationType.AUTO)
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+public class User {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // 반드시 값을 가지도록 합니다.
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String username;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String nickName;
 
     @Column(nullable = false)
@@ -29,13 +27,10 @@ public class User extends Timestamped {
     @Column(nullable = false)
     private String position;
 
-
-    public User(String username, String password, String nickName, String position) {
+    public User(String username, String nickName, String password, String position) {
         this.username = username;
-        this.password = password;
         this.nickName = nickName;
+        this.password = password;
         this.position = position;
-
-
     }
 }

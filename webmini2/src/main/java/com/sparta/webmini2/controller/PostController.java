@@ -1,13 +1,15 @@
 package com.sparta.webmini2.controller;
 
 import com.sparta.webmini2.dto.PostRequestDto;
-import com.sparta.webmini2.dto.PostResponseDto;
 import com.sparta.webmini2.model.Post;
+import com.sparta.webmini2.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
@@ -37,17 +39,20 @@ public class PostController {
     }
     // 게시글 생성
     @PostMapping("/api/post")
-    public PostResponseDto createPost(@RequestBody PostRequestDto requestDto){
+    public Post createPost(@RequestBody PostRequestDto requestDto){
+
         return PostService.createPost(requestDto);
     }
     //게시글 수정
     @PutMapping("/api/post/{postId}")
-    public PostResponseDto updatePost(@PathVariable Long postId, @RequestBody PostRequestDto requestDto) {
-        return PostService.update(postId, requestDto);
+    public Long updatePost(@PathVariable Long postId, @RequestBody PostRequestDto requestDto) {
+        PostService.update(postId, requestDto);
+        return postId;
     }
     //게시글 삭제
     @DeleteMapping("/api/post/{postId}")
-    public PostResponseDto deletePost(@PathVariable Long postId) {
-        return PostService.deletePost(postId);
+    public Long deletePost(@PathVariable Long postId) {
+        PostService.deletePost(postId);
+        return postId;
     }
 }
