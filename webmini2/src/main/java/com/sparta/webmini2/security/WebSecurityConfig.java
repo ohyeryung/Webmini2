@@ -137,9 +137,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // 회원 관리 API 허용
         skipPathList.add("GET,/user/**");
         skipPathList.add("GET,/api/**");
+<<<<<<<< HEAD:webmini2/src/main/java/com/sparta/webmini2/security/WebSecurityConfig.java
         skipPathList.add("POST,/api/register");
         skipPathList.add("POST,/api/login");
         skipPathList.add("POST,/api/idCheck");
+========
+        skipPathList.add("POST,/api/signup");
+        skipPathList.add("POST,/api/idCheck");
+
+        skipPathList.add("POST,/api/logout");
+>>>>>>>> origin/main:webmini2/src/main/java/com/sparta/webmini2/sercurity/WebSecurityConfig.java
 
         skipPathList.add("GET,/");
         skipPathList.add("GET,/basic.js");

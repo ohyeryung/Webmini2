@@ -1,0 +1,25 @@
+Index: webmini2/src/main/java/com/sparta/webmini2/Dto/SignupRequestDto.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.sparta.webmini2.Dto;\r\n\r\nimport lombok.Getter;\r\nimport lombok.Setter;\r\n\r\n@Setter\r\n@Getter\r\npublic class SignupRequestDto {\r\n    private String username;\r\n    private String password;\r\n    private String passwordCheck;\r\n    private String nickName;\r\n    private String position;\r\n\r\n    public SignupRequestDto(String username, String password, String passwordCheck,String nickName,String position) {\r\n        this.username = username;\r\n        this.password = password;\r\n        this.passwordCheck = passwordCheck;\r\n        this.nickName = nickName;\r\n        this.position = position;\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/webmini2/src/main/java/com/sparta/webmini2/Dto/SignupRequestDto.java b/webmini2/src/main/java/com/sparta/webmini2/Dto/SignupRequestDto.java
+--- a/webmini2/src/main/java/com/sparta/webmini2/Dto/SignupRequestDto.java	(revision 29e63dd8383d4608dda85bf3e736418b23841a98)
++++ b/webmini2/src/main/java/com/sparta/webmini2/Dto/SignupRequestDto.java	(date 1649724678983)
+@@ -1,4 +1,4 @@
+-package com.sparta.webmini2.Dto;
++package com.sparta.webmini2.dto;
+ 
+ import lombok.Getter;
+ import lombok.Setter;
+@@ -12,7 +12,7 @@
+     private String nickName;
+     private String position;
+ 
+-    public SignupRequestDto(String username, String password, String passwordCheck,String nickName,String position) {
++    public SignupRequestDto(String username, String password, String passwordCheck, String nickName, String position) {
+         this.username = username;
+         this.password = password;
+         this.passwordCheck = passwordCheck;

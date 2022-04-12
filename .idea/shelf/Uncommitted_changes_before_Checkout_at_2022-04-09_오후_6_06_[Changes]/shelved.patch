@@ -1,0 +1,155 @@
+Index: webmini2/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\r\n    id 'org.springframework.boot' version '2.6.6'\r\n    id 'io.spring.dependency-management' version '1.0.11.RELEASE'\r\n    id 'java'\r\n}\r\n\r\ngroup = 'com.sparta'\r\nversion = '0.0.1-SNAPSHOT'\r\nsourceCompatibility = '1.8'\r\n\r\nconfigurations {\r\n    compileOnly {\r\n        extendsFrom annotationProcessor\r\n    }\r\n}\r\n\r\nrepositories {\r\n    mavenCentral()\r\n}\r\n\r\ndependencies {\r\n    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'\r\n    implementation 'org.springframework.boot:spring-boot-starter-web'\r\n    compileOnly 'org.projectlombok:lombok'\r\n    runtimeOnly 'com.h2database:h2'\r\n    runtimeOnly 'mysql:mysql-connector-java'\r\n    annotationProcessor 'org.projectlombok:lombok'\r\n    testImplementation 'org.springframework.boot:spring-boot-starter-test'\r\n}\r\n\r\ntasks.named('test') {\r\n    useJUnitPlatform()\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/webmini2/build.gradle b/webmini2/build.gradle
+--- a/webmini2/build.gradle	(revision ca2bfb12e5fc7b5c6183ecb3697fe0196cae642a)
++++ b/webmini2/build.gradle	(date 1649494789630)
+@@ -21,11 +21,18 @@
+ dependencies {
+     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+     implementation 'org.springframework.boot:spring-boot-starter-web'
++    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+     compileOnly 'org.projectlombok:lombok'
+     runtimeOnly 'com.h2database:h2'
+     runtimeOnly 'mysql:mysql-connector-java'
+     annotationProcessor 'org.projectlombok:lombok'
+     testImplementation 'org.springframework.boot:spring-boot-starter-test'
++    // 스프링 시큐리티
++    implementation 'org.springframework.boot:spring-boot-starter-security'
++    // Thymeleaf (뷰 템플릿 엔진)
++    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
++    // Thymeleaf 에서 springsecurity 의존성 설정
++    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+ }
+ 
+ tasks.named('test') {
+Index: webmini2/src/main/java/com/sparta/webmini2/controller/UserController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.sparta.webmini2.controller;\r\n\r\npublic class UserController {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/webmini2/src/main/java/com/sparta/webmini2/controller/UserController.java b/webmini2/src/main/java/com/sparta/webmini2/controller/UserController.java
+--- a/webmini2/src/main/java/com/sparta/webmini2/controller/UserController.java	(revision ca2bfb12e5fc7b5c6183ecb3697fe0196cae642a)
++++ b/webmini2/src/main/java/com/sparta/webmini2/controller/UserController.java	(date 1649495182037)
+@@ -1,4 +1,61 @@
+ package com.sparta.webmini2.controller;
+ 
++import com.sparta.webmini2.Dto.SignupRequestDto;
++import com.sparta.webmini2.service.UserService;
++import org.springframework.beans.factory.annotation.Autowired;
++import org.springframework.ui.Model;
++import org.springframework.web.bind.annotation.PostMapping;
++import org.springframework.web.bind.annotation.RequestBody;
++import org.springframework.web.bind.annotation.RestController;
++
++@RestController
+ public class UserController {
+-}
++
++    private final UserService userService;
++
++    @Autowired
++    public UserController(UserService userService) {
++        this.userService = userService;
++    }
++
++//    // 회원 로그인 페이지
++//    @GetMapping("/user/login")
++//    public String login() {
++//        return "login";
++//    }
++//
++//    // 에러 문구 표시
++//    @GetMapping("/user/login/error")
++//    public String loginError(Model model) {
++//        model.addAttribute("loginError", true);
++//        return "login";
++//    }
++
++//    // 회원 가입 페이지
++//    @GetMapping("/user/signup")
++//    public String signup() {
++//        return "signup";
++//    }
++
++    // 회원 가입 요청 처리
++    @PostMapping("/user/signup")
++    public  String registerUser(@RequestBody SignupRequestDto requestDto, Model model) {
++        if (userService.registerUser(requestDto).equals("")) {
++            return "success";
++        } else {
++            model.addAttribute("errortext", userService.registerUser(requestDto));
++            return "false";
++        }
++    }}
++
++
++
++//    // 유저 로그인 체크
++//    @GetMapping("/api/userCheck")
++//    public String userCheck(@AuthenticationPrincipal UserDetailsImpl userDetails) {
++//        if (userDetails != null) {
++//            return userDetails.getUser().getUsername();
++//        }
++//        return "";
++//    }
++//}
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"77bac69b-c7f1-4f41-afd2-abb3dcaec10c\" name=\"Changes\" comment=\"각종 패키지 클래스 생성\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-09__10_09__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-09__10_09__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-09__10_09__Changes_1.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-09__10_09__Changes_1.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__10_03__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__10_03__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__10_03__Changes_1.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__10_03__Changes_1.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__9_58__Changes_.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__9_58__Changes_.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/.gradle/7.4.1/executionHistory/executionHistory.bin\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/.gradle/7.4.1/executionHistory/executionHistory.bin\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/.gradle/7.4.1/executionHistory/executionHistory.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/.gradle/7.4.1/executionHistory/executionHistory.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/fileHashes.bin\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/fileHashes.bin\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/fileHashes.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/fileHashes.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/resourceHashesCache.bin\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/resourceHashesCache.bin\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/.gradle/buildOutputCleanup/buildOutputCleanup.lock\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/.gradle/buildOutputCleanup/buildOutputCleanup.lock\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/.gradle/file-system.probe\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/.gradle/file-system.probe\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/controller/CommentController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/controller/CommentController.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/controller/PostController.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/controller/PostController.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/dto/CommentRequestDto.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/dto/CommentRequestDto.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/dto/PostRequestDto.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/dto/PostRequestDto.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/model/Comment.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/model/Comment.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/model/Post.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/model/Post.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/service/CommentService.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/service/CommentService.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/service/PostService.class\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/service/PostService.class\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/build/tmp/compileJava/previous-compilation-data.bin\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/build/tmp/compileJava/previous-compilation-data.bin\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/controller/CommentController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/controller/CommentController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/controller/PostController.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/controller/PostController.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/dto/CommentRequestDto.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/dto/CommentRequestDto.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/dto/PostRequestDto.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/dto/PostRequestDto.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/model/Comment.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/model/Comment.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/model/Post.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/model/Post.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/service/CommentService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/service/CommentService.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/service/PostService.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/service/PostService.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ExternalProjectsData\">\r\n    <projectState path=\"$PROJECT_DIR$/webmini2\">\r\n      <ProjectState />\r\n    </projectState>\r\n  </component>\r\n  <component name=\"ExternalProjectsManager\">\r\n    <system id=\"GRADLE\">\r\n      <state>\r\n        <projects_view>\r\n          <tree_state>\r\n            <expand>\r\n              <path>\r\n                <item name=\"\" type=\"6a2764b6:ExternalProjectsStructure$RootNode\" />\r\n                <item name=\"webmini2\" type=\"f1a62948:ProjectNode\" />\r\n              </path>\r\n            </expand>\r\n            <select />\r\n          </tree_state>\r\n        </projects_view>\r\n      </state>\r\n    </system>\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"home\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitToolBoxStore\">\r\n    <option name=\"recentBranches\">\r\n      <RecentBranches>\r\n        <option name=\"branchesForRepo\">\r\n          <list>\r\n            <RecentBranchesForRepo>\r\n              <option name=\"branches\">\r\n                <list>\r\n                  <RecentBranch>\r\n                    <option name=\"branchName\" value=\"main\" />\r\n                    <option name=\"lastUsedInstant\" value=\"1649466609\" />\r\n                  </RecentBranch>\r\n                  <RecentBranch>\r\n                    <option name=\"branchName\" value=\"post\" />\r\n                    <option name=\"lastUsedInstant\" value=\"1649466608\" />\r\n                  </RecentBranch>\r\n                </list>\r\n              </option>\r\n              <option name=\"repositoryRootUrl\" value=\"file://$PROJECT_DIR$\" />\r\n            </RecentBranchesForRepo>\r\n          </list>\r\n        </option>\r\n      </RecentBranches>\r\n    </option>\r\n  </component>\r\n  <component name=\"JpbToolWindowState\">\r\n    <option name=\"myId2FirstActivated\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaInspector\" value=\"true\" />\r\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"true\" />\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"true\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"myId2Visible\">\r\n      <map>\r\n        <entry key=\"com.haulmont.jpb.jpaInspector\" value=\"true\" />\r\n        <entry key=\"com.haulmont.jpb.jpaPalette\" value=\"true\" />\r\n        <entry key=\"com.haulmont.jpb.jpaStructure\" value=\"false\" />\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"27Vz1AfONjbaiCbhA3j2eR2JCns\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"1\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RequestMappingsPanelOrder0\" value=\"0\" />\r\n    <property name=\"RequestMappingsPanelOrder1\" value=\"1\" />\r\n    <property name=\"RequestMappingsPanelOrder2\" value=\"2\" />\r\n    <property name=\"RequestMappingsPanelWidth0\" value=\"75\" />\r\n    <property name=\"RequestMappingsPanelWidth1\" value=\"75\" />\r\n    <property name=\"RequestMappingsPanelWidth2\" value=\"75\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/../왜가리/Spring 숙련 주차 개인 과제_샘플 코드/springwebProject-main\" />\r\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Project\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.15\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.0\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.lookFeel\" />\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Webmini2Application\" type=\"SpringBootApplicationConfigurationType\" factoryName=\"Spring Boot\">\r\n      <module name=\"webmini2.main\" />\r\n      <option name=\"SPRING_BOOT_MAIN_CLASS\" value=\"com.sparta.webmini2.Webmini2Application\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"77bac69b-c7f1-4f41-afd2-abb3dcaec10c\" name=\"Changes\" comment=\"\" />\r\n      <created>1649419824657</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1649419824657</updated>\r\n      <workItem from=\"1649419826452\" duration=\"11672000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"게시글 전체조회 ,게시글 특정조회, 게시글 작성 완료\">\r\n      <created>1649421256523</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649421256524</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"PostController,Timestamped 추가\">\r\n      <created>1649426087774</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649426087774</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"각종 패키지 클래스 생성\">\r\n      <created>1649427015592</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1649427015592</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"4\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"FILTERS\">\r\n                <map>\r\n                  <entry key=\"branch\">\r\n                    <value>\r\n                      <list>\r\n                        <option value=\"origin/post\" />\r\n                      </list>\r\n                    </value>\r\n                  </entry>\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"게시글 전체조회 ,게시글 특정조회, 게시글 작성 완료\" />\r\n    <MESSAGE value=\"PostController,Timestamped 추가\" />\r\n    <MESSAGE value=\"각종 패키지 클래스 생성\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"각종 패키지 클래스 생성\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision ca2bfb12e5fc7b5c6183ecb3697fe0196cae642a)
++++ b/.idea/workspace.xml	(date 1649495182644)
+@@ -4,37 +4,11 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="77bac69b-c7f1-4f41-afd2-abb3dcaec10c" name="Changes" comment="각종 패키지 클래스 생성">
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-09__10_09__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-09__10_09__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-09__10_09__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-09__10_09__Changes_1.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__10_03__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__10_03__Changes_.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__10_03__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__10_03__Changes_1.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__9_58__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022-04-09__9_58__Changes_.xml" afterDir="false" />
++    <list default="true" id="77bac69b-c7f1-4f41-afd2-abb3dcaec10c" name="Changes" comment="testtest">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/executionHistory/executionHistory.bin" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/file-system.probe" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/controller/CommentController.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/controller/PostController.class" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/controller/PostController.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/dto/CommentRequestDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/dto/CommentRequestDto.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/dto/PostRequestDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/dto/PostRequestDto.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/model/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/model/Comment.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/model/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/model/Post.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/service/CommentService.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/service/PostService.class" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/service/PostService.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/controller/CommentController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/controller/PostController.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/dto/CommentRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/dto/CommentRequestDto.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/dto/PostRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/dto/PostRequestDto.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/model/Comment.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/model/Post.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/service/CommentService.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/service/PostService.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/checksums/checksums.lock" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/webmini2/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build.gradle" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/controller/UserController.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />

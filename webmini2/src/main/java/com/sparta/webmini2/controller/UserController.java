@@ -45,6 +45,19 @@ public class UserController {
 //        return userService.login(requestDto);
 //    }
 
+
+
+
+    @PostMapping("/api/idCheck")
+    public ResponseDto idDueCheck(@RequestBody SignupRequestDto requestDto, String username) {
+        String message = signUpValidator.idDueCheck(requestDto) ;
+        if(message == "이미 사용중인 id입니다"){
+            return new ResponseDto(false, message);
+        }
+        return new ResponseDto(true, message);
+    }
+
+
     // 로그인 여부 확인
     @PostMapping("/api/islogin")
     public ResponseDto islogin(@AuthenticationPrincipal UserDetailsImpl userDetails) {

@@ -8,6 +8,9 @@ import com.sparta.webmini2.repository.CommentRepository;
 import com.sparta.webmini2.service.CommentService;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,8 +25,8 @@ public class CommentController {
 
     //     댓글 전체 조회
     @GetMapping("/api/comments/{postId}")
-    public List<Comment> getComment(@PathVariable Long postId) {
-        return CommentService.getComment(postId);
+    public Page<Comment> getComment(@PathVariable Long postId , @PageableDefault(size = 5) Pageable pageable) {
+        return CommentService.getComment(postId,pageable);
     }
     // 댓글 생성
     @PostMapping("/api/comments/{postId}")
