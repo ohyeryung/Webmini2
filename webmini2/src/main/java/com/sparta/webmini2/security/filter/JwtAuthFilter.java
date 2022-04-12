@@ -1,7 +1,7 @@
-package com.sparta.webmini2.sercurity.filter;
+package com.sparta.webmini2.security.filter;
 
-import com.sparta.webmini2.sercurity.jwt.HeaderTokenExtractor;
-import com.sparta.webmini2.sercurity.jwt.JwtPreProcessingToken;
+import com.sparta.webmini2.security.jwt.HeaderTokenExtractor;
+import com.sparta.webmini2.security.jwt.JwtPreProcessingToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContext;

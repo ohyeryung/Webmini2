@@ -1,4 +1,4 @@
-package com.sparta.webmini2.sercurity;
+package com.sparta.webmini2.security;
 
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.security.web.util.matcher.OrRequestMatcher;

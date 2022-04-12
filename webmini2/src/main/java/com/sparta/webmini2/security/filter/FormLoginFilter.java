@@ -1,4 +1,4 @@
-package com.sparta.webmini2.sercurity.filter;
+package com.sparta.webmini2.security.filter;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;

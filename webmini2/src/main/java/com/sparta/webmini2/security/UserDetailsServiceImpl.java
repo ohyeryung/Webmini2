@@ -1,4 +1,4 @@
-package com.sparta.webmini2.sercurity;
+package com.sparta.webmini2.security;
 
 import com.sparta.webmini2.model.User;
 import com.sparta.webmini2.repository.UserRepository;
@@ -20,7 +20,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = userRepository.findByUsername(username)
-                .orElseThrow(() -> new UsernameNotFoundException("Can't find " + username));
+                .orElseThrow(() -> new UsernameNotFoundException("아이디를 찾을 수 없습니다."));
 
         return new UserDetailsImpl(user);
     }

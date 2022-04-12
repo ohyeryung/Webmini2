@@ -1,10 +1,10 @@
-package com.sparta.webmini2.sercurity.provider;
+package com.sparta.webmini2.security.provider;
 
 import com.sparta.webmini2.model.User;
 import com.sparta.webmini2.repository.UserRepository;
-import com.sparta.webmini2.sercurity.UserDetailsImpl;
-import com.sparta.webmini2.sercurity.jwt.JwtDecoder;
-import com.sparta.webmini2.sercurity.jwt.JwtPreProcessingToken;
+import com.sparta.webmini2.security.UserDetailsImpl;
+import com.sparta.webmini2.security.jwt.JwtDecoder;
+import com.sparta.webmini2.security.jwt.JwtPreProcessingToken;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

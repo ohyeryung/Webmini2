@@ -1,8 +1,8 @@
-package com.sparta.webmini2.sercurity.jwt;
+package com.sparta.webmini2.security.jwt;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
-import com.sparta.webmini2.sercurity.UserDetailsImpl;
+import com.sparta.webmini2.security.UserDetailsImpl;
 
 import java.util.Date;
 

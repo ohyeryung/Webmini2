@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4323cb-8b14-47ca-bbcd-5fa0aee14fb0" name="Changes" comment="" />
+    <list default="true" id="3f4323cb-8b14-47ca-bbcd-5fa0aee14fb0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/Dto/SignupRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/Dto/SignupRequestDto.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,13 +34,14 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="signup" />
+        <entry key="$PROJECT_DIR$" value="김빛찬" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -77,6 +80,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../jwt" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.sparta.webmini2.controller" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="Webmini2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -174,7 +182,42 @@
       <option name="project" value="LOCAL" />
       <updated>1649685910531</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="merge test">
+      <created>1649740215634</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1649740215634</updated>
+    </task>
+    <task id="LOCAL-00013" summary="merge testtt">
+      <created>1649740225948</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1649740225948</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Commit Test">
+      <created>1649740521846</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1649740521846</updated>
+    </task>
+    <task id="LOCAL-00015" summary="SIGNUP MERGE TEST">
+      <created>1649740856367</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1649740856367</updated>
+    </task>
+    <task id="LOCAL-00016" summary="SIGNUP MERGE TEST">
+      <created>1649741020882</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1649741020882</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,19 +228,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="signup" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -205,7 +236,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Commit Test" />
     <MESSAGE value="회원가입 기능 구현" />
     <MESSAGE value="회원가입 기능 구현 (유효성 검사 완료)" />
     <MESSAGE value="회원가입 기능 구현 (아이디, 닉네임 중복확인, return 타입 변경)" />
@@ -213,6 +243,10 @@
     <MESSAGE value="코드 정리" />
     <MESSAGE value="주석 추가" />
     <MESSAGE value="id 중복검사" />
-    <option name="LAST_COMMIT_MESSAGE" value="id 중복검사" />
+    <MESSAGE value="merge test" />
+    <MESSAGE value="merge testtt" />
+    <MESSAGE value="Commit Test" />
+    <MESSAGE value="SIGNUP MERGE TEST" />
+    <option name="LAST_COMMIT_MESSAGE" value="SIGNUP MERGE TEST" />
   </component>
 </project>

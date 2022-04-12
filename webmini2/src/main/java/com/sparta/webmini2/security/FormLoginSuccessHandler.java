@@ -1,7 +1,7 @@
-package com.sparta.webmini2.sercurity;
+package com.sparta.webmini2.security;
 
 
-import com.sparta.webmini2.sercurity.jwt.JwtTokenUtils;
+import com.sparta.webmini2.security.jwt.JwtTokenUtils;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
 
@@ -17,7 +17,7 @@ public class FormLoginSuccessHandler extends SavedRequestAwareAuthenticationSucc
     public void onAuthenticationSuccess(final HttpServletRequest request, final HttpServletResponse response,
                                         final Authentication authentication) {
         final UserDetailsImpl userDetails = ((UserDetailsImpl) authentication.getPrincipal());
-
+        System.out.println(userDetails.getUsername());
 
         // Token 생성
         final String token = JwtTokenUtils.generateJwtToken(userDetails);
