@@ -17,7 +17,7 @@
      ├── /CommentRequestDto.java
      ├── /SignupRequestDto.java
      └── /UserInfoDto.java
-  └──/entity
+  └──/model
      ├── /Post.java
      ├── /Comment.java
      ├── /Timestamped.java

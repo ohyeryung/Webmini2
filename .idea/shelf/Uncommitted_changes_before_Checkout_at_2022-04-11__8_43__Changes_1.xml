@@ -1,0 +1,29 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_2022-04-11_오후_8_43_[Changes]1" date="1649677458726" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-11_오후_8_43_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 2022-04-11 오후 8:43 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="webmini2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="AFTER_PATH" value="webmini2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-11_오후_8_43_[Changes]1/buildOutputCleanup.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="webmini2/.gradle/7.4.1/executionHistory/executionHistory.bin" />
+    <option name="AFTER_PATH" value="webmini2/.gradle/7.4.1/executionHistory/executionHistory.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-11_오후_8_43_[Changes]1/executionHistory.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="webmini2/.gradle/7.4.1/executionHistory/executionHistory.lock" />
+    <option name="AFTER_PATH" value="webmini2/.gradle/7.4.1/executionHistory/executionHistory.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-11_오후_8_43_[Changes]1/executionHistory.lock" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="webmini2/.gradle/7.4.1/fileHashes/fileHashes.bin" />
+    <option name="AFTER_PATH" value="webmini2/.gradle/7.4.1/fileHashes/fileHashes.bin" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-11_오후_8_43_[Changes]1/fileHashes.bin" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="webmini2/.gradle/7.4.1/fileHashes/fileHashes.lock" />
+    <option name="AFTER_PATH" value="webmini2/.gradle/7.4.1/fileHashes/fileHashes.lock" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2022-04-11_오후_8_43_[Changes]1/fileHashes.lock" />
+  </binary>
+</changelist>

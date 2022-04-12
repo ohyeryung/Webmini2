@@ -12,7 +12,7 @@ public class PostRequestDto {
     private int frontNum;
     private int backNum;
     private boolean completed;
-    private String userId;
+    private String username;
 //    private String createdAt;
 
 }
