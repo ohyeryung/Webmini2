@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="340f1128-6f54-43d0-af13-08a6a1e35a2f" name="Changes" comment="">
+    <list default="true" id="a1aa6c3c-1a52-4ac4-8320-6fc65a1b6e62" name="Changes" comment="id 중복검사">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +57,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="27Vze5PEJslZFt1WmO3G621Pe4X" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -69,33 +69,18 @@
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../jwt" />
-  </component>
-  <component name="RecentsManager">
-    <key name="ExtractSuperBase.RECENT_KEYS">
-      <recent name="com.sparta.webmini2.sercurity" />
-    </key>
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="webmini2.test" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="webmini2.test" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Webmini2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="webmini2.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.sparta.webmini2.Webmini2Application" />
@@ -184,35 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649666449908</updated>
     </task>
-    <task id="LOCAL-00011" summary="회원가입 조건 추가">
-      <created>1649668818314</created>
+    <task id="LOCAL-00011" summary="id 중복검사">
+      <created>1649685910531</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1649668818314</updated>
+      <updated>1649685910531</updated>
     </task>
-    <task id="LOCAL-00012" summary="아이디 중복체크 메세지 추가">
-      <created>1649685950789</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1649685950790</updated>
-    </task>
-    <task id="LOCAL-00013" summary="failurehandler 수정 중">
-      <created>1649738343157</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1649738343157</updated>
-    </task>
-    <task id="LOCAL-00014" summary="failurehandler 수정 중">
-      <created>1649738511016</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1649738511016</updated>
-    </task>
-    <option name="localTasksCounter" value="15" />
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,10 +202,7 @@
     <MESSAGE value="로그인 기능 구현 (JWT 인증방식)" />
     <MESSAGE value="코드 정리" />
     <MESSAGE value="주석 추가" />
-    <MESSAGE value="회원가입 조건 추가" />
-    <MESSAGE value="아이디 중복체크 메세지" />
-    <MESSAGE value="아이디 중복체크 메세지 추가" />
-    <MESSAGE value="failurehandler 수정 중" />
-    <option name="LAST_COMMIT_MESSAGE" value="failurehandler 수정 중" />
+    <MESSAGE value="id 중복검사" />
+    <option name="LAST_COMMIT_MESSAGE" value="id 중복검사" />
   </component>
 </project>
