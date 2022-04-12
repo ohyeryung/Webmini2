@@ -55,14 +55,14 @@ public class UserInfoValidator {
         return validatorResult;
     }
 
-    //아이디 중복 체크
-    public boolean checkUsernameDuplicate(String username) {
-        return userRepository.existsByUsername(username);
-    }
-
     //닉네임 중복 체크
     public boolean checkNickNameDuplicate(String nickName) {
         return userRepository.existsByNickName(nickName);
+    }
+
+    //아이디 중복 체크
+    public boolean checkUsernameDuplicate(String username) {
+        return userRepository.existsByUsername(username);
     }
 
     //아이디 중복 검사
@@ -72,4 +72,5 @@ public class UserInfoValidator {
         }
         return "사용가능한 아이디 입니다.";
     }
+
 }

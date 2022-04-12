@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.security.auth.login.CredentialException;
-
 @RequiredArgsConstructor
 @RestController
 public class UserController {
@@ -21,16 +19,14 @@ public class UserController {
     private final UserService userService;
 
     // 회원 가입 요청 처리
-    @PostMapping("/api/signup")
+    @PostMapping("/api/register")
     public ResponseDto registUser(@RequestBody SignupRequestDto requestDto, Errors errors) {
         String message = signUpValidator.getValidMessage(requestDto, errors);
         System.out.println(message);
         if (message.equals("회원가입 성공")) {
             return userService.registUser(requestDto);
-        } else {
-            ResponseDto responseDto = new ResponseDto(false, message);
-            return responseDto;
         }
+        return new ResponseDto(false, message);
     }
 
     // 아이디 중복 검사
@@ -44,10 +40,10 @@ public class UserController {
     }
 
     // 로그인
-    @PostMapping("api/login")
-    public ResponseDto loginUser(@RequestBody SignupRequestDto requestDto) {
-        return new ResponseDto(true);
-    }
+//    @PostMapping("/api/login")
+//    public ResponseDto login(@RequestBody SignupRequestDto requestDto) {
+//        return userService.login(requestDto);
+//    }
 
     // 로그인 여부 확인
     @PostMapping("/api/islogin")

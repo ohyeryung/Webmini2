@@ -28,13 +28,14 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final JWTAuthProvider jwtAuthProvider;
     private final HeaderTokenExtractor headerTokenExtractor;
+    private AuthFailureHandler authFailureHandler;
 
     public WebSecurityConfig(
             JWTAuthProvider jwtAuthProvider,
-            HeaderTokenExtractor headerTokenExtractor
-    ) {
+            HeaderTokenExtractor headerTokenExtractor) {
         this.jwtAuthProvider = jwtAuthProvider;
         this.headerTokenExtractor = headerTokenExtractor;
+
     }
 
     @Bean
@@ -80,15 +81,22 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest()
                 .permitAll()
                 .and()
-                // [로그아웃 기능]
-                .logout()
+            .formLogin()
+                .loginPage("/api/login")
+                .loginProcessingUrl("/api/login")
+                .successHandler(formLoginSuccessHandler())
+                .failureHandler(authFailureHandler())
+                .permitAll()
+                .and()
+            // [로그아웃 기능]
+            .logout()
                 // 로그아웃 요청 처리 URL
                 .logoutUrl("/api/logout")
                 .permitAll()
                 .and()
                 .exceptionHandling()
-                // "접근 불가" 페이지 URL 설정
-                .accessDeniedPage("/forbidden.html");
+            // "접근 불가" 페이지 URL 설정
+            .accessDeniedPage("/forbidden.html");
     }
 
     @Bean
@@ -96,6 +104,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         FormLoginFilter formLoginFilter = new FormLoginFilter(authenticationManager());
         formLoginFilter.setFilterProcessesUrl("/api/login");
         formLoginFilter.setAuthenticationSuccessHandler(formLoginSuccessHandler());
+        formLoginFilter.setAuthenticationFailureHandler(authFailureHandler());
         formLoginFilter.afterPropertiesSet();
         return formLoginFilter;
     }
@@ -103,6 +112,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public FormLoginSuccessHandler formLoginSuccessHandler() {
         return new FormLoginSuccessHandler();
+    }
+
+    @Bean
+    public AuthFailureHandler authFailureHandler() {
+        return new AuthFailureHandler();
     }
 
     @Bean
@@ -123,7 +137,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // 회원 관리 API 허용
         skipPathList.add("GET,/user/**");
         skipPathList.add("GET,/api/**");
-        skipPathList.add("POST,/api/signup");
+        skipPathList.add("POST,/api/register");
+        skipPathList.add("POST,/api/login");
         skipPathList.add("POST,/api/idCheck");
 
         skipPathList.add("GET,/");
