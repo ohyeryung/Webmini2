@@ -1,0 +1,421 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+deleted file mode 100644
+--- a/.idea/workspace.xml	(revision d150e2d8b782da1d13b301b399ac8f9f297d8a85)
++++ /dev/null	(revision d150e2d8b782da1d13b301b399ac8f9f297d8a85)
+@@ -1,232 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="AutoImportSettings">
+-    <option name="autoReloadType" value="SELECTIVE" />
+-  </component>
+-  <component name="ChangeListManager">
+-    <list default="true" id="77bac69b-c7f1-4f41-afd2-abb3dcaec10c" name="Changes" comment="회원가입">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/executionHistory/executionHistory.bin" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/7.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/.gradle/file-system.probe" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build/classes/java/main/com/sparta/webmini2/controller/UserController.class" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/webmini2/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+-    </list>
+-    <option name="SHOW_DIALOG" value="false" />
+-    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+-    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+-    <option name="LAST_RESOLUTION" value="IGNORE" />
+-  </component>
+-  <component name="ExternalProjectsData">
+-    <projectState path="$PROJECT_DIR$/webmini2">
+-      <ProjectState />
+-    </projectState>
+-  </component>
+-  <component name="ExternalProjectsManager">
+-    <system id="GRADLE">
+-      <state>
+-        <projects_view>
+-          <tree_state>
+-            <expand>
+-              <path>
+-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+-                <item name="webmini2" type="f1a62948:ProjectNode" />
+-              </path>
+-            </expand>
+-            <select />
+-          </tree_state>
+-        </projects_view>
+-      </state>
+-    </system>
+-  </component>
+-  <component name="FileTemplateManagerImpl">
+-    <option name="RECENT_TEMPLATES">
+-      <list>
+-        <option value="Interface" />
+-        <option value="Class" />
+-      </list>
+-    </option>
+-  </component>
+-  <component name="Git.Settings">
+-    <option name="RECENT_BRANCH_BY_REPOSITORY">
+-      <map>
+-        <entry key="$PROJECT_DIR$" value="home" />
+-      </map>
+-    </option>
+-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+-  </component>
+-  <component name="GitToolBoxStore">
+-    <option name="recentBranches">
+-      <RecentBranches>
+-        <option name="branchesForRepo">
+-          <list>
+-            <RecentBranchesForRepo>
+-              <option name="branches">
+-                <list>
+-                  <RecentBranch>
+-                    <option name="branchName" value="main" />
+-                    <option name="lastUsedInstant" value="1649466609" />
+-                  </RecentBranch>
+-                  <RecentBranch>
+-                    <option name="branchName" value="post" />
+-                    <option name="lastUsedInstant" value="1649466608" />
+-                  </RecentBranch>
+-                </list>
+-              </option>
+-              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+-            </RecentBranchesForRepo>
+-          </list>
+-        </option>
+-      </RecentBranches>
+-    </option>
+-  </component>
+-  <component name="JpbToolWindowState">
+-    <option name="myId2FirstActivated">
+-      <map>
+-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+-        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+-      </map>
+-    </option>
+-    <option name="myId2Visible">
+-      <map>
+-        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+-        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+-        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+-      </map>
+-    </option>
+-  </component>
+-  <component name="MarkdownSettingsMigration">
+-    <option name="stateVersion" value="1" />
+-  </component>
+-  <component name="ProjectId" id="27Vz1AfONjbaiCbhA3j2eR2JCns" />
+-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+-    <ConfirmationsSetting value="1" id="Add" />
+-  </component>
+-  <component name="ProjectViewState">
+-    <option name="hideEmptyMiddlePackages" value="true" />
+-    <option name="showLibraryContents" value="true" />
+-  </component>
+-  <component name="PropertiesComponent">
+-    <property name="RequestMappingsPanelOrder0" value="0" />
+-    <property name="RequestMappingsPanelOrder1" value="1" />
+-    <property name="RequestMappingsPanelOrder2" value="2" />
+-    <property name="RequestMappingsPanelWidth0" value="75" />
+-    <property name="RequestMappingsPanelWidth1" value="75" />
+-    <property name="RequestMappingsPanelWidth2" value="75" />
+-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+-    <property name="WebServerToolWindowFactoryState" value="false" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../왜가리/Spring 숙련 주차 개인 과제_샘플 코드/springwebProject-main" />
+-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+-    <property name="project.structure.last.edited" value="Project" />
+-    <property name="project.structure.proportion" value="0.15" />
+-    <property name="project.structure.side.proportion" value="0.0" />
+-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+-  </component>
+-  <component name="RecentsManager">
+-    <key name="CopyClassDialog.RECENTS_KEY">
+-      <recent name="com.sparta.webmini2.service" />
+-      <recent name="com.sparta.webmini2.security" />
+-      <recent name="com.sparta.webmini2.repository" />
+-      <recent name="com.sparta.webmini2.model" />
+-      <recent name="com.sparta.webmini2.controller" />
+-    </key>
+-  </component>
+-  <component name="RunManager">
+-    <configuration name="Webmini2Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+-      <module name="webmini2.main" />
+-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.sparta.webmini2.Webmini2Application" />
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
+-    </configuration>
+-  </component>
+-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+-  <component name="TaskManager">
+-    <task active="true" id="Default" summary="Default task">
+-      <changelist id="77bac69b-c7f1-4f41-afd2-abb3dcaec10c" name="Changes" comment="" />
+-      <created>1649419824657</created>
+-      <option name="number" value="Default" />
+-      <option name="presentableId" value="Default" />
+-      <updated>1649419824657</updated>
+-      <workItem from="1649419826452" duration="11672000" />
+-    </task>
+-    <task id="LOCAL-00001" summary="게시글 전체조회 ,게시글 특정조회, 게시글 작성 완료">
+-      <created>1649421256523</created>
+-      <option name="number" value="00001" />
+-      <option name="presentableId" value="LOCAL-00001" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1649421256524</updated>
+-    </task>
+-    <task id="LOCAL-00002" summary="PostController,Timestamped 추가">
+-      <created>1649426087774</created>
+-      <option name="number" value="00002" />
+-      <option name="presentableId" value="LOCAL-00002" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1649426087774</updated>
+-    </task>
+-    <task id="LOCAL-00003" summary="각종 패키지 클래스 생성">
+-      <created>1649427015592</created>
+-      <option name="number" value="00003" />
+-      <option name="presentableId" value="LOCAL-00003" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1649427015592</updated>
+-    </task>
+-    <task id="LOCAL-00004" summary="컨트롤러,서비스 리팩토링 완료">
+-      <created>1649485710063</created>
+-      <option name="number" value="00004" />
+-      <option name="presentableId" value="LOCAL-00004" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1649485710063</updated>
+-    </task>
+-    <task id="LOCAL-00005" summary="회원가입">
+-      <created>1649503382934</created>
+-      <option name="number" value="00005" />
+-      <option name="presentableId" value="LOCAL-00005" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1649503382934</updated>
+-    </task>
+-    <option name="localTasksCounter" value="6" />
+-    <servers />
+-  </component>
+-  <component name="TypeScriptGeneratedFilesManager">
+-    <option name="version" value="3" />
+-  </component>
+-  <component name="Vcs.Log.Tabs.Properties">
+-    <option name="TAB_STATES">
+-      <map>
+-        <entry key="MAIN">
+-          <value>
+-            <State>
+-              <option name="FILTERS">
+-                <map>
+-                  <entry key="branch">
+-                    <value>
+-                      <list>
+-                        <option value="origin/main" />
+-                      </list>
+-                    </value>
+-                  </entry>
+-                </map>
+-              </option>
+-            </State>
+-          </value>
+-        </entry>
+-      </map>
+-    </option>
+-  </component>
+-  <component name="VcsManagerConfiguration">
+-    <MESSAGE value="게시글 전체조회 ,게시글 특정조회, 게시글 작성 완료" />
+-    <MESSAGE value="PostController,Timestamped 추가" />
+-    <MESSAGE value="각종 패키지 클래스 생성" />
+-    <MESSAGE value="컨트롤러,서비스 리팩토링 완료" />
+-    <MESSAGE value="회원가입" />
+-    <option name="LAST_COMMIT_MESSAGE" value="회원가입" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/gradle.xml
+===================================================================
+diff --git a/.idea/gradle.xml b/.idea/gradle.xml
+deleted file mode 100644
+--- a/.idea/gradle.xml	(revision d150e2d8b782da1d13b301b399ac8f9f297d8a85)
++++ /dev/null	(revision d150e2d8b782da1d13b301b399ac8f9f297d8a85)
+@@ -1,17 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="GradleMigrationSettings" migrationVersion="1" />
+-  <component name="GradleSettings">
+-    <option name="linkedExternalProjectsSettings">
+-      <GradleProjectSettings>
+-        <option name="distributionType" value="DEFAULT_WRAPPED" />
+-        <option name="externalProjectPath" value="$PROJECT_DIR$/webmini2" />
+-        <option name="modules">
+-          <set>
+-            <option value="$PROJECT_DIR$/webmini2" />
+-          </set>
+-        </option>
+-      </GradleProjectSettings>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+deleted file mode 100644
+--- a/.idea/misc.xml	(revision d150e2d8b782da1d13b301b399ac8f9f297d8a85)
++++ /dev/null	(revision d150e2d8b782da1d13b301b399ac8f9f297d8a85)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ExternalStorageConfigurationManager" enabled="true" />
+-  <component name="FrameworkDetectionExcludesConfiguration">
+-    <file type="web" url="file://$PROJECT_DIR$/webmini2" />
+-  </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+-</project>
+\ No newline at end of file
+Index: .idea/modules/webmini2.test.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<module version=\"4\">\r\n  <component name=\"FacetManager\">\r\n    <facet type=\"web\" name=\"Web\">\r\n      <configuration>\r\n        <webroots />\r\n        <sourceRoots />\r\n      </configuration>\r\n    </facet>\r\n    <facet type=\"Spring\" name=\"Spring\">\r\n      <configuration />\r\n    </facet>\r\n  </component>\r\n</module>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules/webmini2.test.iml b/.idea/modules/webmini2.test.iml
+--- a/.idea/modules/webmini2.test.iml	(revision d150e2d8b782da1d13b301b399ac8f9f297d8a85)
++++ b/.idea/modules/webmini2.test.iml	(date 1649509897529)
+@@ -1,5 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<module version="4">
++<module external.linked.project.id="webmini2:test" external.linked.project.path="$MODULE_DIR$/../../webmini2" external.root.project.path="$MODULE_DIR$/../../webmini2" external.system.id="GRADLE" external.system.module.group="com.sparta" external.system.module.type="sourceSet" external.system.module.version="0.0.1-SNAPSHOT" type="JAVA_MODULE" version="4">
+   <component name="FacetManager">
+     <facet type="web" name="Web">
+       <configuration>
+@@ -11,4 +11,115 @@
+       <configuration />
+     </facet>
+   </component>
++  <component name="NewModuleRootManager">
++    <output-test url="file://$MODULE_DIR$/../../webmini2/build/classes/java/test" />
++    <exclude-output />
++    <content url="file://$MODULE_DIR$/../../webmini2/src/test">
++      <sourceFolder url="file://$MODULE_DIR$/../../webmini2/src/test/java" isTestSource="true" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="module" module-name="webmini2.main" />
++    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-data-jpa:2.6.6" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-websocket:2.6.6" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-web:2.6.6" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-security:2.6.6" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-thymeleaf:2.6.6" level="project" />
++    <orderEntry type="library" name="Gradle: org.thymeleaf.extras:thymeleaf-extras-springsecurity5:3.0.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-test:2.6.6" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-aop:2.6.6" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-jdbc:2.6.6" level="project" />
++    <orderEntry type="library" name="Gradle: jakarta.transaction:jakarta.transaction-api:1.3.3" level="project" />
++    <orderEntry type="library" name="Gradle: jakarta.persistence:jakarta.persistence-api:2.2.3" level="project" />
++    <orderEntry type="library" name="Gradle: org.hibernate:hibernate-core:5.6.7.Final" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.data:spring-data-jpa:2.6.3" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework:spring-aspects:5.3.18" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework:spring-websocket:5.3.18" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework:spring-messaging:5.3.18" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-json:2.6.6" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter:2.6.6" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-tomcat:2.6.6" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework:spring-webmvc:5.3.18" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework:spring-web:5.3.18" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.security:spring-security-web:5.6.2" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.security:spring-security-config:5.6.2" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework:spring-aop:5.3.18" level="project" />
++    <orderEntry type="library" name="Gradle: org.thymeleaf:thymeleaf-spring5:3.0.15.RELEASE" level="project" />
++    <orderEntry type="library" name="Gradle: org.thymeleaf.extras:thymeleaf-extras-java8time:3.0.4.RELEASE" level="project" />
++    <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.36" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-test-autoconfigure:2.6.6" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-test:2.6.6" level="project" />
++    <orderEntry type="library" name="Gradle: com.jayway.jsonpath:json-path:2.6.0" level="project" />
++    <orderEntry type="library" name="Gradle: jakarta.xml.bind:jakarta.xml.bind-api:2.3.3" level="project" />
++    <orderEntry type="library" name="Gradle: org.assertj:assertj-core:3.21.0" level="project" />
++    <orderEntry type="library" name="Gradle: org.hamcrest:hamcrest:2.2" level="project" />
++    <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter:5.8.2" level="project" />
++    <orderEntry type="library" name="Gradle: org.mockito:mockito-junit-jupiter:4.0.0" level="project" />
++    <orderEntry type="library" name="Gradle: org.mockito:mockito-core:4.0.0" level="project" />
++    <orderEntry type="library" name="Gradle: org.skyscreamer:jsonassert:1.5.0" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework:spring-test:5.3.18" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework:spring-core:5.3.18" level="project" />
++    <orderEntry type="library" name="Gradle: org.xmlunit:xmlunit-core:2.8.4" level="project" />
++    <orderEntry type="library" name="Gradle: org.aspectj:aspectjweaver:1.9.7" level="project" />
++    <orderEntry type="library" name="Gradle: com.zaxxer:HikariCP:4.0.3" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework:spring-jdbc:5.3.18" level="project" />
++    <orderEntry type="library" name="Gradle: org.glassfish.jaxb:jaxb-runtime:2.3.6" level="project" />
++    <orderEntry type="library" name="Gradle: org.hibernate.common:hibernate-commons-annotations:5.1.2.Final" level="project" />
++    <orderEntry type="library" name="Gradle: org.jboss.logging:jboss-logging:3.4.3.Final" level="project" />
++    <orderEntry type="library" name="Gradle: net.bytebuddy:byte-buddy:1.11.22" level="project" />
++    <orderEntry type="library" name="Gradle: antlr:antlr:2.7.7" level="project" />
++    <orderEntry type="library" name="Gradle: org.jboss:jandex:2.4.2.Final" level="project" />
++    <orderEntry type="library" name="Gradle: com.fasterxml:classmate:1.5.1" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework:spring-context:5.3.18" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.data:spring-data-commons:2.6.3" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework:spring-orm:5.3.18" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework:spring-tx:5.3.18" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework:spring-beans:5.3.18" level="project" />
++    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.2" level="project" />
++    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.module:jackson-module-parameter-names:2.13.2" level="project" />
++    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.13.2" level="project" />
++    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.13.2.2" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:2.6.6" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot:2.6.6" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-logging:2.6.6" level="project" />
++    <orderEntry type="library" name="Gradle: jakarta.annotation:jakarta.annotation-api:1.3.5" level="project" />
++    <orderEntry type="library" name="Gradle: org.yaml:snakeyaml:1.29" level="project" />
++    <orderEntry type="library" name="Gradle: org.apache.tomcat.embed:tomcat-embed-websocket:9.0.60" level="project" />
++    <orderEntry type="library" name="Gradle: org.apache.tomcat.embed:tomcat-embed-core:9.0.60" level="project" />
++    <orderEntry type="library" name="Gradle: org.apache.tomcat.embed:tomcat-embed-el:9.0.60" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework:spring-expression:5.3.18" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.security:spring-security-core:5.6.2" level="project" />
++    <orderEntry type="library" name="Gradle: org.thymeleaf:thymeleaf:3.0.15.RELEASE" level="project" />
++    <orderEntry type="library" name="Gradle: net.minidev:json-smart:2.4.8" level="project" />
++    <orderEntry type="library" name="Gradle: jakarta.activation:jakarta.activation-api:1.2.2" level="project" />
++    <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter-params:5.8.2" level="project" />
++    <orderEntry type="library" name="Gradle: org.junit.jupiter:junit-jupiter-api:5.8.2" level="project" />
++    <orderEntry type="library" name="Gradle: net.bytebuddy:byte-buddy-agent:1.11.22" level="project" />
++    <orderEntry type="library" name="Gradle: com.vaadin.external.google:android-json:0.0.20131108.vaadin1" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework:spring-jcl:5.3.18" level="project" />
++    <orderEntry type="library" name="Gradle: org.glassfish.jaxb:txw2:2.3.6" level="project" />
++    <orderEntry type="library" name="Gradle: com.sun.istack:istack-commons-runtime:3.0.12" level="project" />
++    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.13.2" level="project" />
++    <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.13.2" level="project" />
++    <orderEntry type="library" name="Gradle: ch.qos.logback:logback-classic:1.2.11" level="project" />
++    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-to-slf4j:2.17.2" level="project" />
++    <orderEntry type="library" name="Gradle: org.slf4j:jul-to-slf4j:1.7.36" level="project" />
++    <orderEntry type="library" name="Gradle: org.springframework.security:spring-security-crypto:5.6.2" level="project" />
++    <orderEntry type="library" name="Gradle: org.attoparser:attoparser:2.0.5.RELEASE" level="project" />
++    <orderEntry type="library" name="Gradle: org.unbescape:unbescape:1.1.6.RELEASE" level="project" />
++    <orderEntry type="library" name="Gradle: net.minidev:accessors-smart:2.4.8" level="project" />
++    <orderEntry type="library" scope="PROVIDED" name="Gradle: org.apiguardian:apiguardian-api:1.1.2" level="project" />
++    <orderEntry type="library" name="Gradle: org.junit.platform:junit-platform-commons:1.8.2" level="project" />
++    <orderEntry type="library" name="Gradle: org.opentest4j:opentest4j:1.2.0" level="project" />
++    <orderEntry type="library" name="Gradle: ch.qos.logback:logback-core:1.2.11" level="project" />
++    <orderEntry type="library" name="Gradle: org.apache.logging.log4j:log4j-api:2.17.2" level="project" />
++    <orderEntry type="library" name="Gradle: org.ow2.asm:asm:9.1" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.h2database:h2:1.4.200" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: mysql:mysql-connector-java:8.0.28" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.jupiter:junit-jupiter-engine:5.8.2" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.objenesis:objenesis:3.2" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: com.sun.activation:jakarta.activation:1.2.2" level="project" />
++    <orderEntry type="library" scope="RUNTIME" name="Gradle: org.junit.platform:junit-platform-engine:1.8.2" level="project" />
++  </component>
++  <component name="TestModuleProperties" production-module="webmini2.main" />
+ </module>
+\ No newline at end of file

@@ -21,7 +21,7 @@ public class PostController {
 
 
     // 게시글 전체 조회  ,페이징처리
-    @GetMapping("/api/post/")
+    @GetMapping("/api/post")
     public Page<Post> getPost(@PageableDefault(size = 5) Pageable pageable
 //            @RequestParam("page")  int page,
 //            @RequestParam("size") int size,
@@ -40,6 +40,7 @@ public class PostController {
     // 게시글 생성
     @PostMapping("/api/post")
     public Post createPost(@RequestBody PostRequestDto requestDto){
+
         return PostService.createPost(requestDto);
     }
     //게시글 수정
