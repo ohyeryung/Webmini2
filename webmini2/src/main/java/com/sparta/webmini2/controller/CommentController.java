@@ -1,8 +1,8 @@
 package com.sparta.webmini2.controller;
 
 import com.sparta.webmini2.dto.CommentRequestDto;
+import com.sparta.webmini2.dto.CommentResponseDto;
 import com.sparta.webmini2.model.Comment;
-import com.sparta.webmini2.model.Post;
 import com.sparta.webmini2.repository.CommentRepository;
 
 import com.sparta.webmini2.service.CommentService;
@@ -30,19 +30,17 @@ public class CommentController {
     }
     // 댓글 생성
     @PostMapping("/api/comments/{postId}")
-    public Comment createComment(@RequestBody CommentRequestDto requestDto){
+    public CommentResponseDto createComment(@RequestBody CommentRequestDto requestDto){
         return CommentService.createComment(requestDto);
     }
     // 댓글 수정
     @PutMapping("/api/comments/{commentId}")
-    public Long updateComment(@PathVariable Long commentId, @RequestBody CommentRequestDto requestDto) {
-        CommentService.update(commentId, requestDto);
-        return commentId;
+    public CommentResponseDto updateComment(@PathVariable Long commentId, @RequestBody CommentRequestDto requestDto) {
+        return CommentService.update(commentId, requestDto);
     }
     //댓글 삭제
     @DeleteMapping("/api/comments/{commentId}")
-    public Long deleteComment(@PathVariable Long commentId) {
-        CommentService.deleteComment(commentId);
-        return commentId;
+    public CommentResponseDto deleteComment(@PathVariable Long commentId) {
+        return CommentService.deleteComment(commentId);
     }
 }

@@ -2,7 +2,10 @@ package com.sparta.webmini2.service;
 
 
 import com.sparta.webmini2.dto.CommentRequestDto;
+import com.sparta.webmini2.dto.CommentResponseDto;
+import com.sparta.webmini2.dto.PostResponseDto;
 import com.sparta.webmini2.model.Comment;
+import com.sparta.webmini2.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -18,9 +21,12 @@ public class CommentService {
     private final com.sparta.webmini2.repository.CommentRepository CommentRepository;
 
     //댓글 생성
-    public Comment createComment(CommentRequestDto requestDto) {
+    public CommentResponseDto createComment(CommentRequestDto requestDto) {
+        CommentResponseDto commentResponseDto = null;
         Comment comment = new Comment(requestDto);
-        return CommentRepository.save(comment);
+        CommentRepository.save(comment);
+        commentResponseDto = new CommentResponseDto(true);
+        return commentResponseDto;
     }
     //댓글 전체조회
     public Page<Comment> getComment(Long postId ,Pageable pageable) {
@@ -28,16 +34,22 @@ public class CommentService {
     }
     //댓글 수정
     @Transactional
-    public Long update(Long id, CommentRequestDto requestDto) {
+    public CommentResponseDto update(Long id, CommentRequestDto requestDto) {
+        CommentResponseDto commentResponseDto = null;
         Comment comment = CommentRepository.findById(id).orElseThrow(
                 () -> new IllegalArgumentException("아이디가 존재하지 않습니다.")
         );
         comment.update(requestDto);
-        return comment.getCommentId();
+//        comment.getCommentId();
+        commentResponseDto = new CommentResponseDto(true);
+        return commentResponseDto;
     }
     //댓글 삭제
-    public Long deleteComment(Long commentId) {
+    public CommentResponseDto deleteComment(Long commentId) {
+        CommentResponseDto commentResponseDto = null;
         CommentRepository.deleteById(commentId);
-        return commentId;
+//        commentId;
+        commentResponseDto = new CommentResponseDto(true);
+        return commentResponseDto;
     }
 }
