@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f4323cb-8b14-47ca-bbcd-5fa0aee14fb0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/Dto/SignupRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/webmini2/src/main/java/com/sparta/webmini2/Dto/SignupRequestDto.java" afterDir="false" />
-    </list>
+    <list default="true" id="3f4323cb-8b14-47ca-bbcd-5fa0aee14fb0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
